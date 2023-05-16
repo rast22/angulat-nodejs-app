@@ -1,0 +1,15 @@
+<div class="form-container">
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="postForm" class="post-form">
+    <div>
+      <label for="title">Title</label>
+      <input placeholder="Title of the post" id="title" type="text" formControlName="title">
+    </div>
+    <div>
+      <label for="content">Article content</label>
+      <textarea placeholder="your content" id="content" type="text" formControlName="content"></textarea>
+    </div>
+
+    <button  type="submit" [disabled]="!postForm.valid">Add new post</button>
+  </form>
+</div>

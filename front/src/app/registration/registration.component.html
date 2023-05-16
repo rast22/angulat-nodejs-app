@@ -1,0 +1,22 @@
+<div class="form-container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="registerForm" class="auth-form">
+    <div>
+      <label for="email">Email</label>
+      <input placeholder="Email" id="email" type="email" formControlName="email">
+    </div>
+    <div>
+      <label for="email">Username</label>
+      <input placeholder="Username" id="username" type="text" formControlName="username">
+    </div>
+    <div>
+      <label for="email">Password</label>
+      <input placeholder="Password" id="password" type="password" formControlName="password">
+    </div>
+    <div>
+      <label for="email">Confirm password</label>
+      <input placeholder="Confirm password" class="form-input" id="confirm-password" type="password" formControlName="confirm-password">
+    </div>
+    <button  type="submit" [disabled]="!registerForm.valid || !passwordsMatch() ">Register</button>
+
+  </form>
+</div>
